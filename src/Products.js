@@ -5,13 +5,13 @@ const Products = [
         price : 1000,
         category : "Phone",
         description : "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, obcaecati hic ratione quia beatae facere autem voluptatum? Libero, accusantium distinctio!",
-        image : "/src/assets/Mo4.PNG"
+        image : "/src/assets/seza.jpg"
     },
     {
         id: 2 , 
         title: "Rollex",
         price : 1000,
-        category : "Phone",
+        category : "Montre",
         description : "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, obcaecati hic ratione quia beatae facere autem voluptatum? Libero, accusantium distinctio!",
         image : "/src/assets/Mo1.PNG"
     },

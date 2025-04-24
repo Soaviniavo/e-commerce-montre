@@ -27,10 +27,22 @@ function Footer() {
               <img src={react} alt="logo" className="mb-4" />
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, ipsam.</p>
               <div className="flex items-center mt-4 gap-8">
-                <Facebook size={35} className="bg-white text-slate-900 rounded-md p-1 cursor-pointer" />
-                <Youtube size={35} className="bg-white text-slate-900 rounded-md p-1 cursor-pointer" />
-                <Instagram size={35} className="bg-white text-slate-900 rounded-md p-1 cursor-pointer" />
-                <Twitter size={35} className="bg-white text-slate-900 rounded-md p-1 cursor-pointer" />
+                <Facebook
+                  size={35}
+                  className="bg-white text-slate-900 rounded-md p-1 cursor-pointer"
+                />
+                <Youtube
+                  size={35}
+                  className="bg-white text-slate-900 rounded-md p-1 cursor-pointer"
+                />
+                <Instagram
+                  size={35}
+                  className="bg-white text-slate-900 rounded-md p-1 cursor-pointer"
+                />
+                <Twitter
+                  size={35}
+                  className="bg-white text-slate-900 rounded-md p-1 cursor-pointer"
+                />
               </div>
             </div>
             <div>

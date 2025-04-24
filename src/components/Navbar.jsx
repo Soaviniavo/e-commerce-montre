@@ -64,7 +64,7 @@ function Navbar() {
               placeholder="Search Product..."
               className=" bg-zinc-100 text-gray-800 text-md rounded-md border border-zinc-200  focus:outline-none py-2 px-2 md:w-full "
               value={searchTerm}
-              onChange={e => dispatch(setSearchTerm(e.target.value))}
+              onChange={(e) => dispatch(setSearchTerm(e.target.value))}
             />
           </form>
           <Link>
