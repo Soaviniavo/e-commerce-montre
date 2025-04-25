@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { User } from "lucide-react";
 import { ShoppingCart } from "lucide-react";
-import react from "../assets/react.svg";
+import logo from "../assets/90365.jpg"
 import { useDispatch, useSelector } from "react-redux";
 import { setSearchTerm } from "../features/products/ProductSlice";
 
@@ -11,9 +11,13 @@ function Navbar() {
   const dispatch = useDispatch();
   const searchTerm = useSelector((state) => state.product.searchTerm);
 
+  const cartItems = useSelector((state) => state.cart.items);
+  const itemCount = cartItems.reduce((total, item) => total + item.quantity, 0);
+
   const handleUser = () => {
     setIsOpen(!isOpen);
   };
+
   return (
     <header className="bg-white shadow-sm">
       <div className="py-4 shadow-sm">
@@ -35,7 +39,7 @@ function Navbar() {
           <div
             className={`${
               isOpen
-                ? "flex flex-col absolute right-10  top-13  bg-zinc-50 p-3 gap-3 md:right-30"
+                ? "flex flex-col absolute right-10  top-13  bg-zinc-50 p-3 gap-3 md:right-38"
                 : "hidden"
             }`}
           >
@@ -56,7 +60,7 @@ function Navbar() {
       <nav>
         <div className="flex justify-between items-center container mx-auto md:py-5 py-4 md:px-20 px-4">
           <Link to="/">
-            <img src={react} alt="" />
+            <img src={logo} className="w-15 h-15 " />
           </Link>
           <form className="w-1/2 sm:block hidden">
             <input
@@ -67,9 +71,16 @@ function Navbar() {
               onChange={(e) => dispatch(setSearchTerm(e.target.value))}
             />
           </form>
-          <Link>
-            <ShoppingCart size={40} className="bg-gray-100  py-2 rounded-full" />
-          </Link>
+          <div className="relative">
+            <Link to={"/cart"}>
+              <ShoppingCart size={40} className="bg-gray-100  py-2 rounded-full" />
+              {itemCount > 0 && (
+                <span className="absolute rounded-full -top-2  -right-2.5  text-white text-[10px] w-5 h-5 bg-lime-500 flex items-center justify-center ">
+                  {itemCount}
+                </span>
+              )}
+            </Link>
+          </div>
         </div>
       </nav>
     </header>

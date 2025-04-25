@@ -1,5 +1,5 @@
 import React from "react";
-import react from "../assets/react.svg";
+import logo from "../assets/90365.jpg"
 import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 import { Link } from "react-router-dom";
 function Footer() {
@@ -24,7 +24,7 @@ function Footer() {
         <div className="container mx-auto md:px-20 px-4 ">
           <div className="grid grid-cols-1 md:grid-cols-2  xl:grid-cols-4 gap-10">
             <div>
-              <img src={react} alt="logo" className="mb-4" />
+              <img src={logo} alt="logo" className="mb-4 w-20 h-20 rounded" />
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, ipsam.</p>
               <div className="flex items-center mt-4 gap-8">
                 <Facebook

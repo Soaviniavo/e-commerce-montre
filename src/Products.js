@@ -10,7 +10,7 @@ const Products = [
     {
         id: 2 , 
         title: "Rollex",
-        price : 1000,
+        price : 200,
         category : "Montre",
         description : "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, obcaecati hic ratione quia beatae facere autem voluptatum? Libero, accusantium distinctio!",
         image : "/src/assets/Mo1.PNG"
@@ -18,7 +18,7 @@ const Products = [
     {
         id: 10 , 
         title: "Redmi 6",
-        price : 1000,
+        price : 100,
         category : "Phone",
         description : "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, obcaecati hic ratione quia beatae facere autem voluptatum? Libero, accusantium distinctio!",
         image : "/src/assets/Mo2.PNG"
@@ -26,7 +26,7 @@ const Products = [
     {
         id: 3 , 
         title: "Redmi 6",
-        price : 1000,
+        price : 800,
         category : "Phone",
         description : "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, obcaecati hic ratione quia beatae facere autem voluptatum? Libero, accusantium distinctio!",
         image : "/src/assets/Mo3.PNG"
@@ -34,7 +34,7 @@ const Products = [
     {
         id: 4 , 
         title: "Redmi 6",
-        price : 1000,
+        price : 400,
         category : "Phone",
         description : "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, obcaecati hic ratione quia beatae facere autem voluptatum? Libero, accusantium distinctio!",
         image : "/src/assets/Mo4.PNG"
@@ -42,7 +42,7 @@ const Products = [
     {
         id: 5 , 
         title: "Redmi 6",
-        price : 1000,
+        price : 150,
         category : "Phone",
         description : "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, obcaecati hic ratione quia beatae facere autem voluptatum? Libero, accusantium distinctio!",
         image : "/src/assets/Mo6.PNG"
