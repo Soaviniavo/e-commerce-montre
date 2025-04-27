@@ -1,8 +1,13 @@
 import React from "react";
-import logo from "../assets/90365.jpg"
+import logo from "../assets/90365.jpg";
 import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setSelectedCategory } from "../features/products/ProductSlice";
 function Footer() {
+  const categories = ["Luxury", "Sport", "Classic", "Automatic"];
+  const dispatch = useDispatch();
+  
   return (
     <footer className="bg-slate-900 shadow-md">
       <div className="container md:px-20 px-4 ">
@@ -65,18 +70,13 @@ function Footer() {
             <div>
               <h2 className="text-2xl font-semibold mb-3">Categories</h2>
               <ul>
-                <li>
-                  <Link className="hover:underline">Phones</Link>
-                </li>
-                <li>
-                  <Link className="hover:underline">Monitors</Link>
-                </li>
-                <li>
-                  <Link className="hover:underline">GPUs</Link>
-                </li>
-                <li>
-                  <Link className="hover:underline">Laptops</Link>
-                </li>
+                {categories.map((category) => {
+                  return (
+                    <li  key={category} onClick={() => dispatch(setSelectedCategory(category))}>
+                      <Link className="hover:underline">{category}</Link>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
             <div>

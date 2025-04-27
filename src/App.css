@@ -1,8 +1,1 @@
 @import "tailwindcss";
-
-
-.bg{
-    background: url(./assets/boite-montre.jpg);
-    background-size: cover;
-    height: 70vh;
-}

@@ -11,8 +11,7 @@ const initialState = {
 const filterProducts = (state) => {
   return state.items.filter((product) => {
     const matchSearch = product.title.toLowerCase().includes(state.searchTerm.toLowerCase());
-    const matchCategory =
-      state.selectedCategory === "All" || product.category === state.selectedCategory;
+    const matchCategory = state.selectedCategory === "All" || product.category === state.selectedCategory;
     return matchSearch && matchCategory;
   });
 };

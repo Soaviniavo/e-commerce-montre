@@ -2,7 +2,8 @@ import { ArrowBigLeft, ArrowLeftCircle, ShoppingCart } from "lucide-react";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
-import { addToCart } from "../features/cart/CartSlice";
+import { addToCart } from "../features/cart/CartSlice"; 
+import NotFound from "../components/NotFound";
 
 function ProductDetails() {
   const { id } = useParams();
@@ -10,16 +11,7 @@ function ProductDetails() {
   const dispatch = useDispatch();
 
   if (!product) {
-    return (
-      <div className="container mx-auto px-4 py-8 my-50">
-        <div className="text-center">
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">Product Not Found</h2>
-          <Link to="/" className="text-blue-500 hover:text-blue-800">
-            Return to home
-          </Link>
-        </div>
-      </div>
-    );
+    return <NotFound message="Product Not Found"/>
   }
 
   return (
@@ -28,18 +20,18 @@ function ProductDetails() {
         <ArrowLeftCircle color="orange" /> Back to products
       </Link>
       <div className="grid grid-cols-1 md:grid-cols-2  items-center md:mb-20 gap-8 md:gap-20">
-        <div className="shadow-md rounded flex items-center justify-center">
+        <div className="shadow-md rounded-xl flex items-center justify-center">
           <img
             src={product.image}
-            className=" rounded-lg w-full md:w-2/3 md:py-8 "
+            className="rounded-xl w-full md:w-3/3 "
             alt={product.title}
           />
         </div>
         <div >
-          <h1 className="text-3xl text-gray-800 font-bold mb-4">{product.title}</h1>
+          <h1 className="text-xl md:text-3xl text-gray-800 font-bold mb-4">{product.title}</h1>
           <p className="text-gray-700 mb-6">{product.description}</p>
           <div className="mb-6">
-            <span className="text-3xl text-gray-800 font-bold">${product.price}</span>
+            <span className="text-xl md:text-3xl text-gray-800 font-bold">${product.price}</span>
           </div>
           <div className="mb-6">
             <h3 className="font-semibold  mb-2">Category :</h3>
