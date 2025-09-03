@@ -2,7 +2,7 @@ import { ArrowBigLeft, ArrowLeftCircle, ShoppingCart } from "lucide-react";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
-import { addToCart } from "../features/cart/CartSlice"; 
+import { addToCart } from "../features/cart/cartSlice"; 
 import NotFound from "../components/NotFound";
 
 function ProductDetails() {
